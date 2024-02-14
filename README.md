@@ -8,10 +8,10 @@ Copy the IS 7.0 folder (named wso2is-7.0.0) to the docker folder and run the fol
 
 ## Uploading the image to Azure Container Registry
 
-`az login` login to azure
-`az acr login --name <acrName>` login to the azure container registry
-`docker tag is7.0 <acrName>.azurecr.io/is7.0` tag the image
-`docker push <acrName>.azurecr.io/is7.0` push the image to the azure container registry
+`az login` login to azure <br>
+`az acr login --name <acrName>` login to the azure container registry <br>
+`docker tag is7.0 <acrName>.azurecr.io/is7.0` tag the image <br>
+`docker push <acrName>.azurecr.io/is7.0` push the image to the azure container registry <br>
 
 ## Deploying the image to Azure Kubernetes Service
 
