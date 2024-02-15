@@ -5,6 +5,9 @@ metadata:
   namespace : wso2is
   labels:
     deployment: wso2is
+  annotations:
+    service.beta.kubernetes.io/azure-load-balancer-resource-group: rnd-isurug-charindu
+    service.beta.kubernetes.io/azure-pip-name: wso2is-central-us
 spec:
   type: LoadBalancer
   selector:
