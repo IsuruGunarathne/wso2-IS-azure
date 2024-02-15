@@ -30,6 +30,10 @@ to check if it's working
 
 ## Deploying the image to Azure Kubernetes Service
 
-Navigate to IS folder and run the following commands
+Navigate to IS folder and run the following commands <br>
 
 `helm install is-release .` deploy the image to the kubernetes cluster
+
+## Accessing the kubernetes cluster using a VM
+
+`ssh -i <path-to-certificate> azureuser@<public-IP>` ssh into the VM <br>
