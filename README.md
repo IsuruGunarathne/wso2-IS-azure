@@ -37,3 +37,14 @@ Navigate to IS folder and run the following commands <br>
 ## Accessing the kubernetes cluster using a VM
 
 `ssh -i <path-to-certificate> azureuser@<public-IP>` ssh into the VM <br>
+
+## Accessing the kubernetes cluster using Azure CLI
+
+`az aks get-credentials --resource-group <resource-group> --name <cluster-name>` get the credentials to access the kubernetes cluster <br>
+
+## Accessing the kubernetes cluster using kubectl
+
+`kubectl get pods` get the pods <br>
+`kubectl exec -it <pod-name> -- /bin/bash` exec into a pod <br>
+
+## Azure traffic maanger
