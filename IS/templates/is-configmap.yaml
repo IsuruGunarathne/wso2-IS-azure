@@ -119,5 +119,15 @@ data:
     max_age = 3600
     tag_requests = false
 
+    [output_adapter.email]
+    from_address= "isurujavaemailclient@gmail.com"
+    username= "isurujavaemailclient"
+    password= "ibqrtbxlnwreacnq"
+    hostname= "smtp.gmail.com"
+    port= 587
+    enable_start_tls= true
+    enable_authentication= true
+    signature = "gmail.com"
+
     # from configmap
     
