@@ -37,13 +37,13 @@ data:
 
     [database.identity_db]
     type = "mssql"
-    url = "jdbc:sqlserver://wso2is-db-secondary.database.windows.net:1433;databaseName=ismssqldbprimary"
+    url = "jdbc:sqlserver://wso2is-db-secondary.database.windows.net:1433;databaseName=istestrc"
     username = "regadmin"
     password = "nimdager@123"
 
     [database.shared_db]
     type = "mssql"
-    url = "jdbc:sqlserver://wso2is-db-secondary.database.windows.net:1433;databaseName=ismssqldbprimary"
+    url = "jdbc:sqlserver://wso2is-db-secondary.database.windows.net:1433;databaseName=istestrc"
     username = "regadmin"
     password = "nimdager@123"
 
