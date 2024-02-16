@@ -5,4 +5,4 @@ ingName: is-ingress
 appName: is
 image:
   name: acrasgardeomainrnd001.azurecr.io/is7.0
-  tag: testrcreadonly
+  tag: testrc
