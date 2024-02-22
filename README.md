@@ -48,3 +48,10 @@ Navigate to IS folder and run the following commands <br>
 `kubectl exec -it <pod-name> -- /bin/bash` exec into a pod <br>
 
 ## Azure traffic maanger
+
+Create a traffic manager profile and add the kubernetes clusters IP as an endpoint <br>
+You will have to assign a DNS name before that <br>
+To assign a DNS name go to the relavant ip address and click on the configuration tab <br>
+Then click on the DNS name label and assign a DNS name <br>
+
+You can now add the kubernetes cluster ip as an Azure endpoint
