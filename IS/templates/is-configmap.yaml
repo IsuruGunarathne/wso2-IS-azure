@@ -86,6 +86,9 @@ data:
     proxyPort = 80
     [transport.https.properties]
     proxyPort = 443
+
+    [identity_mgt.user_self_registration]
+    callback_url = "${carbon.protocol}:\\/\\/${carbon.host}\\/.*"
     
     [keystore.primary]
     file_name = "wso2carbon.jks"
