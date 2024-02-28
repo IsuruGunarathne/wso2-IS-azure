@@ -55,3 +55,17 @@ To assign a DNS name go to the relavant ip address and click on the configuratio
 Then click on the DNS name label and assign a DNS name <br>
 
 You can now add the kubernetes cluster ip as an Azure endpoint
+
+## Scripts
+
+### build_uplaod.sh
+
+This copies all jars from jar_files directory into the relavant directory of wso2is-7.0.0 and then builds the docker image and uploads it to the azure container registry
+
+### switch_to_central.sh
+
+initiates failover to the central US database and switched traffic
+
+### switch_to_east.sh
+
+initiates failover to the east US database and switched traffic
