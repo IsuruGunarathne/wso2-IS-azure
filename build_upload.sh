@@ -12,7 +12,32 @@ cp -r "$source_dir"/* "$dest_dir_dropins"
 # Copy files to lib directory
 cp -r "$source_dir"/* "$dest_dir_lib"
 
-echo "Files copied successfully."
+echo "JAR files copied successfully."
+
+echo " "
+echo " "
+
+echo "applying patch"
+# Applying patch
+patch_dir="patch_files"
+j2_path="wso2is-7.0.0/repository/resources/conf/templates/repository/conf"
+json_path="wso2is-7.0.0/repository/resources/conf"
+
+# Deleting existing files
+rm -f "$j2_path"/registry.xml.j2
+rm -f "$json_path"/key-mappings.json
+rm -f "$json_path"/default.json
+
+# Copy files to j2 directory
+cp "$patch_dir"/registry.xml.j2 "$j2_path"
+
+# Copy files to json directory
+cp "$patch_dir"/key-mappings.json "$json_path"
+cp "$patch_dir"/default.json "$json_path"
+
+echo "Patch applied successfully."
+echo " "
+echo " "
 
 # Ask for the tag input
 read -p "Enter tag for the Docker image: " tag
