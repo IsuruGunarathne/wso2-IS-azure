@@ -27,4 +27,10 @@ end_time=$(date +%s)
 
 # Calculate elapsed time
 elapsed_time=$((end_time - start_time))
+
+echo " "
+echo " "
 echo "Time taken: $elapsed_time seconds"
+echo " "
+echo " "
+echo "Failover to central-us completed"
