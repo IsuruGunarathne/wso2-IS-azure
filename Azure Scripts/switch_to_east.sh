@@ -10,13 +10,17 @@ endpointResourceGroup="rnd-isurug-charindu"
 start_time=$(date +%s)
 
 echo "Initialting failover to east-us"
-az sql db replica set-primary --name $database --resource-group $DatabaseResourceGroup --server $Server
+az sql db replica set-primary --name $database --resource-group $DatabaseResourceGroup --server $Server &
 echo "Database switched to east-us"
+echo " "
+echo " "
 
 echo "Updating traffic manager endpoint status to east-us"
-az network traffic-manager endpoint update --name east-us --profile-name $trafficManagerProfile --resource-group $endpointResourceGroup --type $endpointType --endpoint-status Enabled
-az network traffic-manager endpoint update --name central-us --profile-name $trafficManagerProfile --resource-group $endpointResourceGroup --type $endpointType --endpoint-status Disabled
+az network traffic-manager endpoint update --name east-us --profile-name $trafficManagerProfile --resource-group $endpointResourceGroup --type $endpointType --endpoint-status Enabled &
+az network traffic-manager endpoint update --name central-us --profile-name $trafficManagerProfile --resource-group $endpointResourceGroup --type $endpointType --endpoint-status Disabled &
 echo "Traffic manager endpoint status updated"
+
+wait
 
 # Capture end time
 end_time=$(date +%s)
