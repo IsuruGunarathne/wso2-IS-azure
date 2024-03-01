@@ -6,7 +6,7 @@ metadata:
   labels:
     deployment: wso2is # Labels for the deployment itself
 spec:
-  replicas: 2
+  replicas: {{ .Values.replicas }}
   strategy:
     type: RollingUpdate
   selector:
@@ -21,6 +21,20 @@ spec:
         - name: {{ .Values.appName }}
           image: "{{ .Values.image.name }}:{{ .Values.image.tag }}"
           imagePullPolicy: Always
+          livenessProbe:
+            httpGet:
+              path: /carbon/admin/login.jsp
+              port: 9443
+              scheme: HTTPS
+            initialDelaySeconds: {{ .Values.wso2.deployment.wso2is.livenessProbe.initialDelaySeconds }}
+            periodSeconds: {{ .Values.wso2.deployment.wso2is.livenessProbe.periodSeconds }}
+          readinessProbe:
+            httpGet:
+              path: /api/health-check/v1.0/health
+              port: 9443
+              scheme: HTTPS
+            initialDelaySeconds: {{ .Values.wso2.deployment.wso2is.readinessProbe.initialDelaySeconds }}
+            periodSeconds: {{ .Values.wso2.deployment.wso2is.readinessProbe.periodSeconds }}
           ports:
             - containerPort: 9443
             - containerPort: 4000
