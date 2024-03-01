@@ -1,15 +1,13 @@
-# delete the is-configmap.yaml file in IS/templates folder
+# delete the is-deployment.yaml file in IS/templates folder
 
-rm -f ../IS/templates/is-configmap.yaml
 rm -f ../IS/templates/is-deployment.yaml
 echo "read-only is-configmap.yaml file deleted successfully."
 echo " "
 echo " "
 
-echo "replacing configmap with read-write configmap"
-cp configmaps/read_write/is-configmap.yaml ../IS/templates/
-cp configmaps/read_write/is-deployment.yaml ../IS/templates/
-echo "read-write is-configmap.yaml file copied successfully."
+echo "replacing deployment with read-write deployment"
+cp deployments/read_write/is-deployment.yaml ../IS/templates/
+echo "read-write is-deployment.yaml file copied successfully."
 echo " "
 echo " "
 
@@ -20,10 +18,8 @@ echo " "
 echo " "
 
 echo "replacing configmap with read-only is-configmap again"
-rm -f ../IS/templates/is-configmap.yaml
 rm -f ../IS/templates/is-deployment.yaml
-cp configmaps/read_only/is-configmap.yaml ../IS/templates/
-cp configmaps/read_only/is-deployment.yaml ../IS/templates/
+cp deployments/read_only/is-deployment.yaml ../IS/templates/
 echo "read-only is-configmap.yaml file copied successfully."
 echo " "
 echo " "
