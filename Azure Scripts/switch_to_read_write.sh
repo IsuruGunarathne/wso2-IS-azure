@@ -18,6 +18,7 @@ echo " "
 echo " "
 
 echo "replacing configmap with read-only is-configmap again"
+rm -f ../IS/templates/is-configmap.yaml
 cp configmaps/read_only/is-configmap.yaml ../IS/templates/
 echo "read-only is-configmap.yaml file copied successfully."
 echo " "
