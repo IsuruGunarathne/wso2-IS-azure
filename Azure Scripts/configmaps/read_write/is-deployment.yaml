@@ -32,12 +32,12 @@ spec:
                 fieldRef:
                   fieldPath: status.podIP
           volumeMounts: 
-            - name: identity-server-conf-read-only
+            - name: identity-server-conf-read-write
               mountPath: /home/wso2carbon/wso2is-7.0.0/repository/conf/deployment.toml
               subPath: deployment.toml
 
       volumes:
-        - name: identity-server-conf-read-only
+        - name: identity-server-conf-read-write
           configMap:
-            name: identity-server-conf-read-only
+            name: identity-server-conf-read-write
       serviceAccountName: is-service-account
