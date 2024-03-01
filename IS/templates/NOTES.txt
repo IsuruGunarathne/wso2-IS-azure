@@ -1,5 +1,0 @@
-
-## Instructions
-
-use the following command to get the url of the service
-minikube service is-service --url
