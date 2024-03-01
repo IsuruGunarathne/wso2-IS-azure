@@ -12,7 +12,7 @@ echo " "
 echo " "
 
 echo "upgrading the IS deployment"
-helm upgrade is-release ../IS --force
+helm upgrade is-release ../IS
 echo "IS deployment upgraded successfully."
 echo " "
 echo " "
