@@ -14,7 +14,7 @@ echo " "
 echo " "
 
 echo "upgrading the IS deployment"
-helm upgrade is-release -f configmaps/read_write/is-configmap.yaml ../IS --force
+helm upgrade is-release ../IS --force
 echo "IS deployment upgraded successfully."
 echo " "
 echo " "
