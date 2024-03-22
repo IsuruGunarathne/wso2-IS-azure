@@ -2,17 +2,31 @@
 
 # Define source and destination directories
 source_dir="jar_files"
+source_lib="libraries"
 dest_dir_dropins="wso2is-7.0.0/repository/components/dropins"
 dest_dir_lib="wso2is-7.0.0/repository/components/lib"
 registry_name="acrasgardeomainrnd001"
 
+# Delete the existing wso2is-7.0.0 folder
+rm -rf wso2is-7.0.0
+
+# Extract the ZIP file
+# rc7
+unzip wso2is-7.0.0.zip
+
+echo "Extraction and copying completed."
+
 # Copy files to dropins directory
+rm -rf wso2is-7.0.0/repository/components/dropins/org.wso2.custom.user.operation.event.listener-1.0-SNAPSHOT.jar
 cp -r "$source_dir"/* "$dest_dir_dropins"
 
 # Copy files to lib directory
-cp -r "$source_dir"/* "$dest_dir_lib"
+cp -r "$source_lib"/* "$dest_dir_lib"
 
 echo "JAR files copied successfully."
+
+# copy .env to wso2is-7.0.0
+cp .env wso2is-7.0.0
 
 echo " "
 echo " "
