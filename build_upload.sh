@@ -27,6 +27,7 @@ echo "JAR files copied successfully."
 
 # copy .env to wso2is-7.0.0
 cp .env wso2is-7.0.0
+cp reference.conf wso2is-7.0.0/repository/conf
 
 echo " "
 echo " "
