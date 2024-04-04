@@ -5,7 +5,7 @@ ingName: is-ingress
 appName: is
 image:
   name: acrasgardeomainrnd001.azurecr.io/is7.0
-  tag: rolesync
+  tag: agent2
 
 # Number of deployment replicas
 replicas: 1
