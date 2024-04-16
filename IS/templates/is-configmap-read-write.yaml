@@ -36,16 +36,16 @@ data:
     type = "database_unique_id"
 
     [database.identity_db]
-    type = "h2"
-    url = "jdbc:h2:./repository/database/WSO2IDENTITY_DB;DB_CLOSE_ON_EXIT=FALSE;LOCK_TIMEOUT=60000"
-    username = "wso2carbon"
-    password = "wso2carbon"
+    type = "mssql"
+    url = "jdbc:sqlserver://wso2is-db-secondary.database.windows.net:1433;databaseName=ismssqldbprimary"
+    username = "regadmin"
+    password = "nimdager@123"
 
     [database.shared_db]
-    type = "h2"
-    url = "jdbc:h2:./repository/database/WSO2SHARED_DB;DB_CLOSE_ON_EXIT=FALSE;LOCK_TIMEOUT=60000"
-    username = "wso2carbon"
-    password = "wso2carbon"
+    type = "mssql"
+    url = "jdbc:sqlserver://wso2is-db-secondary.database.windows.net:1433;databaseName=ismssqldbprimary"
+    username = "regadmin"
+    password = "nimdager@123"
     
     [clustering]
     membership_scheme = "kubernetes"
