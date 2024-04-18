@@ -5,7 +5,7 @@ ingName: is-ingress-hdr
 appName: is-hdr
 image:
   name: acrasgardeomainrnd001.azurecr.io/is7.0
-  tag: rc7
+  tag: hotdr
 
 # Number of deployment replicas
 replicas: 2
