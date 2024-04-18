@@ -6,6 +6,15 @@ dest_dir_dropins="wso2is-7.0.0/repository/components/dropins"
 dest_dir_lib="wso2is-7.0.0/repository/components/lib"
 registry_name="acrasgardeomainrnd001"
 
+# Delete the existing wso2is-7.0.0 folder
+rm -rf wso2is-7.0.0
+
+# Extract the ZIP file
+# rc7
+unzip wso2is-7.0.0.zip
+
+echo "Extraction and copying completed."
+
 # Copy files to dropins directory
 cp -r "$source_dir"/* "$dest_dir_dropins"
 
