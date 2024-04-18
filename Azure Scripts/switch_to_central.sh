@@ -1,4 +1,4 @@
-database="ismssqldbprimary"
+database="ismssqldbhotdr"
 DatabaseResourceGroup="rnd-isurug-charindu"
 Server="wso2is-db-secondary"
 

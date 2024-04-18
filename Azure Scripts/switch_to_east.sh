@@ -1,4 +1,4 @@
-database="ismssqldbprimary"
+database="ismssqldbhotdr"
 DatabaseResourceGroup="rnd-charindut-isuru"
 Server="is-mssql-server-primary"
 
