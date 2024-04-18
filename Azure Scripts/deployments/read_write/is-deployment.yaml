@@ -4,18 +4,18 @@ metadata:
   name: {{ .Values.depName }}
   namespace: wso2is
   labels:
-    deployment: wso2is # Labels for the deployment itself
+    deployment: wso2is-hdr # Labels for the deployment itself
 spec:
   replicas: {{ .Values.replicas }}
   strategy:
     type: RollingUpdate
   selector:
     matchLabels:
-      deployment: wso2is  # Selector labels to match labels in the pod template
+      deployment: wso2is-hdr  # Selector labels to match labels in the pod template
   template:
     metadata:
       labels:
-        deployment: wso2is  # Labels applied to pods created by this template
+        deployment: wso2is-hdr  # Labels applied to pods created by this template
     spec:
       containers:
         - name: {{ .Values.appName }}
@@ -46,12 +46,12 @@ spec:
                 fieldRef:
                   fieldPath: status.podIP
           volumeMounts: 
-            - name: identity-server-conf-read-write
+            - name: identity-server-conf-read-write-hdr
               mountPath: /home/wso2carbon/wso2is-7.0.0/repository/conf/deployment.toml
               subPath: deployment.toml
 
       volumes:
-        - name: identity-server-conf-read-write
+        - name: identity-server-conf-read-write-hdr
           configMap:
-            name: identity-server-conf-read-write
+            name: identity-server-conf-read-write-hdr
       serviceAccountName: is-service-account

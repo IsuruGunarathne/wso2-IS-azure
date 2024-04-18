@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: identity-service
+  name: identity-service-hdr
   namespace : wso2is
   labels:
-    deployment: wso2is
+    deployment: wso2is-hdr
 spec:
   type: LoadBalancer
   selector:
-    deployment: wso2is
+    deployment: wso2is-hdr
   ports:  
   - name: servlet-http
     port: 9763

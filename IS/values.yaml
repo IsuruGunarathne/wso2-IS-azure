@@ -1,8 +1,8 @@
 isReadOnly: true
-depName: is-deployment
-serName: is-service
-ingName: is-ingress
-appName: is
+depName: is-deployment-hdr
+serName: is-service-hdr
+ingName: is-ingress-hdr
+appName: is-hdr
 image:
   name: acrasgardeomainrnd001.azurecr.io/is7.0
   tag: rc7
