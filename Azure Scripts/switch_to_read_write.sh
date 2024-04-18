@@ -23,7 +23,7 @@ echo " "
 echo " "
 
 echo "upgrading the IS deployment"
-helm upgrade is-release ../IS
+helm upgrade is-hot-dr ../IS
 echo "IS deployment upgraded successfully."
 echo " "
 echo " "
